@@ -1,2 +1,2 @@
 # SlimeSlash
-A videogame inspirate in a levels of Cuphead where your are a soldier with the mission to eliminate a Big Slime
+A video game inspired by a Cuphead boss fight. In this game you are a soldier with the mission to eliminate a Big Slime that causes disaster in the town and you must prevent it from reaching the city. Rain of Slimes, small Slimes that attack you, and you only have your weapon to eliminate the danger before becoming bigger...
