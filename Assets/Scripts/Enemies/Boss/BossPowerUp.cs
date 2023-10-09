@@ -48,7 +48,7 @@ public class BossPowerUp : MonoBehaviour
             default:
                 spriteRenderer.sprite = spriteBossThree;
                 scale.x += 10;
-                Time.timeScale = 0;
+                GameOver.Instance.endGame(false);
             break;
         }
         transform.localScale = scale;

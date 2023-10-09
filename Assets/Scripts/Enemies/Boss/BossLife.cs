@@ -10,7 +10,7 @@ public class BossLife : MonoBehaviour
     {
         if (life == 0)
         {
-            Time.timeScale = 0;
+            GameOver.Instance.endGame(true);
         }
     }
 

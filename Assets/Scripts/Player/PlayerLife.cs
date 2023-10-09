@@ -18,7 +18,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (actualLife == 0)
         {
-            Time.timeScale = 0;
+            GameOver.Instance.endGame(false);
         }
     }
     public void TakeDamage()
