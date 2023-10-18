@@ -8,17 +8,13 @@ public class DestroySlime : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.gameObject.CompareTag(tagName))
         {
-            collision.GetComponent<PlayerLife>().TakeDamage();
-        }
-        if (collision.CompareTag(tagName))
-        {
-            Destroy(gameObject);
-            if(tagName == "Wall")
+            if(collision.gameObject.CompareTag("Wall"))
             {
                 collision.gameObject.GetComponent<PowerSlimeSpawn>().spawnPowerSlime();
             }
+            Destroy(gameObject);
         }
     }
 }

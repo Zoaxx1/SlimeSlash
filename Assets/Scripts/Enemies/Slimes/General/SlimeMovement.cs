@@ -6,8 +6,6 @@ public class SlimeMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private bool goToRight;
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -18,5 +16,5 @@ public class SlimeMovement : MonoBehaviour
         {
             rb.MovePosition(transform.position + transform.right * speed * Time.fixedDeltaTime);
         }
-    }    
+    }
 }

@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfb5e7bfe45948468f0f47769a03c8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
+  life: 200
 --- !u!4 &412377575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4504001582428197187, guid: ea44c00180616f14db848bb1a40290c7, type: 3}
@@ -502,7 +502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493541256}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.216, y: -0.17, z: 0}
+  m_LocalPosition: {x: -0.249, y: -0.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -581,7 +581,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 21
   m_Sprite: {fileID: 5601323976189978565, guid: 2edfd0eb34e1fa349824f67025b135d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1121,7 +1121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804567433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.65, y: -1.21, z: 0}
+  m_LocalPosition: {x: -18.01, y: -1.06, z: 0}
   m_LocalScale: {x: 1, y: 1.025, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1207,8 +1207,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815905592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3088756, y: -3.71, z: 10.037363}
-  m_LocalScale: {x: 21.957453, y: 1, z: 1}
+  m_LocalPosition: {x: 4.6651, y: -3.71, z: 10.037363}
+  m_LocalScale: {x: 23.244158, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1737006573}
@@ -1936,7 +1936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286438050}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.37, y: 1.0033817, z: 10.037363}
+  m_LocalPosition: {x: -7.36, y: 1.0033817, z: 10.037363}
   m_LocalScale: {x: 1.2501, y: 10.223418, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1957,6 +1957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnController: {fileID: 804567434}
   slime: {fileID: 5748315632305877075, guid: 07757984c17ede141b227590754d46c5, type: 3}
+  timeToSpawn: 2
 --- !u!1001 &1298329201
 PrefabInstance:
   m_ObjectHideFlags: 0

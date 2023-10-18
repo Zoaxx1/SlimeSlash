@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1612147028502317842}
   - component: {fileID: 1612147028502317854}
-  - component: {fileID: 1612147028502317855}
   - component: {fileID: 1612147028502317840}
+  - component: {fileID: 1612147028502317855}
   - component: {fileID: 1612147028502317841}
   - component: {fileID: 4291594991856710726}
   - component: {fileID: 2989183960308008754}
+  - component: {fileID: 5411919278382088858}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -89,22 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &1612147028502317855
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612147028502317843}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.024578666, y: -0.06783694}
-  m_Size: {x: 0.46303937, y: 0.38458344}
-  m_Direction: 1
 --- !u!50 &1612147028502317840
 Rigidbody2D:
   serializedVersion: 4
@@ -125,7 +110,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!70 &1612147028502317855
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612147028502317843}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.024578666, y: -0.06783694}
+  m_Size: {x: 0.46303937, y: 0.38458344}
+  m_Direction: 1
 --- !u!114 &1612147028502317841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +167,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Wall
+--- !u!114 &5411919278382088858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612147028502317843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5425c07646d86ae44b1a9fcb2b0c5450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

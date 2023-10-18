@@ -14,6 +14,7 @@ public class BossPowerUp : MonoBehaviour
 
     void Start()
     {
+        SpawnSlimes spawnSlimes = gameObject.GetComponent<SpawnSlimes>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -25,32 +26,28 @@ public class BossPowerUp : MonoBehaviour
     }
     public void PowerUp()
     {
-        Vector2 scale = transform.localScale;
         counterOfPowerUps++;
         switch (counterOfPowerUps)
         {
             case 1:
                 spriteRenderer.color = colorOne;
-                scale.x += 10;
                 break;
             case 2:
                 spriteRenderer.sprite = spriteBossOne;
-                scale.x += 10;
             break;
             case 3:
                 spriteRenderer.color = colorTwo;
-                scale.x += 10;
             break;
             case 4:
                 spriteRenderer.sprite = spriteBossTwo;
-                scale.x += 10;
-                break;
+            break;
             default:
                 spriteRenderer.sprite = spriteBossThree;
-                scale.x += 10;
                 GameOver.Instance.endGame(false);
             break;
         }
+        Vector2 scale = transform.localScale;
+        scale.x += 10;
         transform.localScale = scale;
     }
 }
