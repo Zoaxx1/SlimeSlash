@@ -3,38 +3,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossGrowUp : MonoBehaviour
+public class BossGrowUp
 {
-    [SerializeField] private float _scale;
+    private BossMediator _bossMediator;
 
-    [SerializeField] private List<Sprite> _sprites;
-    [SerializeField] private List<Color> _colors;
-
-    private SpriteRendererChanger _spriteRendererChanger;
-
+    private float _scale = 10;
     private float _growUpCountDown = 5;
+
+    public BossGrowUp(
+        float scale,
+        float growUpCountDown,
+        BossMediator bossMediator)
+    {
+        _scale = scale;
+        _growUpCountDown = growUpCountDown;
+        _bossMediator = bossMediator;
+    }
 
     public float GrowUpCountDown
     {
         get { return _growUpCountDown; }
     }
 
-    void Awake()
-    {
-        _spriteRendererChanger = new SpriteRendererChanger(_sprites, _colors, GetComponent<SpriteRenderer>());
-    }
-
-    public void GrowUp()
+    public void GrowUpBoss(Transform transform)
     {
         _growUpCountDown--;
-        _spriteRendererChanger.UpdateSpriteRenderer();
-        TransformLocalScaleScaled();
-    }
-
-    private void TransformLocalScaleScaled()
-    {
         Vector2 scale = transform.localScale;
-        scale.x += 10;
+        scale.x += _scale;
         transform.localScale = scale;
+        if(_growUpCountDown <= 0)
+        {
+            _bossMediator.GrowUpCountIsEqualToZero();
+        }
     }
 }

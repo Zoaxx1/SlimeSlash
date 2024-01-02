@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 003910f829e4cc84e9320c6df3813c89, type: 3}
+  m_Name: SlimePrefabConfigurer
+  m_EditorClassIdentifier: 
+  _slimePrefabs:
+  - {fileID: -1189445998152362748, guid: 3e9dc5e6a441bee4a8044ef089b1c0dd, type: 3}
+  - {fileID: -8148563347191827873, guid: cb10669199778674bbe7bb3fe7e6a9aa, type: 3}
+  - {fileID: 4859286272178451916, guid: 72132406c8be4fe4b82235e67210be92, type: 3}

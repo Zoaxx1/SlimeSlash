@@ -3,42 +3,38 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
-    public class PlayerJump : IPlayerMoveChanger
+    public class PlayerJump : MonoBehaviour
     {
-        private float _jumpForce;
-        private float _gravityScaleInJump;
-        private float _gravityScaleOutJump;
-        private Rigidbody2D _rb;
+        [SerializeField] private float _jumpForce;
+        [SerializeField] private float _gravityScaleInJump;
+        [SerializeField] private float _gravityScaleOutJump;
+        [SerializeField] private Rigidbody2D _rb;
 
-        public PlayerJump(
-            float jumpForce, 
-            float gravityScaleInJump,
-            float gravityScaleOutJump,
-            Rigidbody2D rb
-            )
+        private IPlayerMediator _player;
+
+        public void Configure(IPlayerMediator player)
         {
-            _jumpForce = jumpForce;
-            _gravityScaleInJump = gravityScaleInJump;
-            _gravityScaleOutJump = gravityScaleOutJump;
-            _rb = rb;
+            _player = player;
         }
 
-        private void Jump()
+        public bool InputUpActionPressed()
         {
-            if (Input.GetKeyDown("up") && PlayerGrounded._isGrounded)
-            {
-                _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
-                _rb.gravityScale = _gravityScaleInJump;
-            }
-            if (_rb.velocity.y < 0)
-            {
-                _rb.gravityScale = _gravityScaleOutJump;
-            }
+            return Input.GetKeyDown("up");
+        }
+        public void TryJump()
+        {
+            _rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
+            _rb.gravityScale = _gravityScaleInJump;
         }
 
-        public void MoveChange()
+        public bool YPlayerIsLessThanZero()
         {
-            Jump();
+            return _rb.velocity.y < 0;
         }
+        public void TryFall()
+        {
+            _rb.gravityScale = _gravityScaleOutJump;
+        }
+
     }
 }

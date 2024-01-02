@@ -3,39 +3,28 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player
 {
-    public class PlayerRotate : IPlayerMoveChanger
+    public class PlayerRotate : MonoBehaviour
     {
-        private Transform _transform;
+        [SerializeField] private Transform _transform;
+        
         private bool _rotateToRight;
 
-        public PlayerRotate(Transform transform)
+        private IPlayerMediator _player;
+
+        public void Configure(IPlayerMediator player)
         {
-            _transform = transform;
-            _rotateToRight = true;
+            _player = player;
         }
 
-        private void RotatePlayer()
+        public bool RotateToRight
         {
-            float XMove = Input.GetAxis("Horizontal");
-            if (XMove < 0 && _rotateToRight)
-            {
-                Rotate();
-            }
-            else if (XMove > 0 && !_rotateToRight)
-            {
-                Rotate();
-            }
+            get { return _rotateToRight; }
+            set { _rotateToRight = value; }
         }
 
-        private void Rotate()
+        public void TryRotate()
         {
-            _rotateToRight = !_rotateToRight;
             _transform.eulerAngles = new Vector3(0, _transform.eulerAngles.y + 180, 0);
-        }
-
-        public void MoveChange()
-        {
-            RotatePlayer();
         }
     }
 }

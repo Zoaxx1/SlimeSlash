@@ -3,20 +3,18 @@ using UnityEngine;
 
 namespace Assets.Scripts.Player.Bullet
 {
-    public class BulletMover : MonoBehaviour
+    public class BulletMover : MonoBehaviour, IBulletMover
     {
-        [SerializeField] private float speed;
+        private float _speed;
 
-        private Rigidbody2D rb;
-
-        private void Awake()
+        public void Configure(float speed)
         {
-            rb = GetComponent<Rigidbody2D>();
+            _speed = speed;
         }
 
-        void FixedUpdate()
+        public Vector3 GetDirection(Transform transform)
         {
-            rb.MovePosition(transform.position + transform.right * speed * Time.fixedDeltaTime);
+            return transform.position + transform.right * _speed * Time.fixedDeltaTime;
         }
     }
 }

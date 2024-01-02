@@ -1,27 +1,24 @@
-﻿using System.Collections;
+﻿using Assets.Scripts.Enemies.Boss;
+using System.Collections;
 using UnityEngine;
 
 namespace Assets.Scripts.GameManagment
 {
     public class GameOverListener : MonoBehaviour
     {
-        [SerializeField] private BossLife _bossLife;
+        [SerializeField] private Boss _boss;
+        [SerializeField] private BossMediator _bossMediator;
         [SerializeField] private PlayerLife _playerLife;
-        [SerializeField] private BossGrowUp _bossGrowUp;
         [SerializeField] private GameOverEvent _gameOverEvent;
 
         void Update()
         {
-            if(_playerLife.Life == 0 || _bossGrowUp.GrowUpCountDown == 0)
+            if(_playerLife.Life == 0 || _bossMediator.BossGrowUpToLimit)
             {
-                Debug.Log(_playerLife.Life);
-                Debug.Log("false");
                 _gameOverEvent.GameIsOver(false);
             }
-            else if(_bossLife.Life == 0)
+            else if(_boss.BossLifeIsZero)
             {
-                Debug.Log(_bossLife.Life);
-                Debug.Log("true");
                 _gameOverEvent.GameIsOver(true);
             }
         }

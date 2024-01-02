@@ -1,17 +1,22 @@
 using Assets.Scripts;
 using UnityEngine;
 
-public class BossLife : MonoBehaviour, IDamaged
+public class BossLife : IDamaged
 {
-    [SerializeField] private float life = 100;
+    private float _life = 100;
+
+    public BossLife(float life)
+    {
+        _life = life;
+    }
 
     public float Life
     {
-        get { return life; }
+        get { return _life; }
     }
 
     public void TakeDamage(float damage)
     {
-        life -= damage;
+        _life -= damage;
     }
 }

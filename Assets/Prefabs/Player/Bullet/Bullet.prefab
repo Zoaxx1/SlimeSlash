@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3307041729457443074}
   - component: {fileID: 5117764027311605929}
   - component: {fileID: 5545808882711246998}
+  - component: {fileID: 1804557669132424677}
+  - component: {fileID: 4133584837322953388}
   - component: {fileID: 176359466212491882}
-  - component: {fileID: 963688595389718772}
-  - component: {fileID: 8707671105032747746}
+  - component: {fileID: 5821985160852507429}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -126,6 +127,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1804557669132424677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935904768571260709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6d50bbd3a5a3840b055f939d2c20ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  damage: 1
+--- !u!114 &4133584837322953388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935904768571260709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ddd80f399f046f4fb9e50fff54018cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &176359466212491882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,20 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ad718c44b26df449aafb3081d4d1ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
---- !u!114 &963688595389718772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2935904768571260709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff1dbf6ecc504043ac2da34283261cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8707671105032747746
+--- !u!114 &5821985160852507429
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,4 +177,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71801fdc25e4e5747a00923232c54ec0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
